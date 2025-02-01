@@ -1,39 +1,41 @@
-# 📚 Multilingual FAQ System
+# 🌍 Multilingual FAQ Service
 
-Welcome to the **Multilingual FAQ System**! 🚀 This is a backend application built with **Node.js, Express, MongoDB**, and **Redis** to manage frequently asked questions with multilingual support. 🌍
-
-## ✨ Features
-
-- 📝 **CRUD Operations** for FAQs
-- 🌎 **Multilingual Support** (English, Hindi, Bengali)
-- 🔑 **Role-Based Access Control (RBAC)** (Admin & User)
-- ⚡ **Redis Caching** for faster responses
-- 🔐 **JWT Authentication** for secure access
+Welcome to the **Multilingual FAQ Service**! 🚀 This backend system is built using **Node.js, Express, MongoDB**, and **Redis** to manage frequently asked questions with seamless multilingual support. 🌏
 
 ---
 
-## 🛠️ Installation & Setup
+## 🚀 Key Features
 
-### 1️⃣ Clone the Repository
+- 📄 **Full CRUD Operations** for FAQs
+- 🌐 **Multi-language Support** (English, Hindi, Bengali)
+- 🔑 **Role-Based Access Control (RBAC)** for Admin & Users
+- ⚡ **High-speed Caching** using Redis
+- 🔐 **Secure JWT Authentication** for access management
+
+---
+
+## 🛠️ Getting Started
+
+### 📥 Clone the Repository
 
 ```sh
-$ git clone https://github.com/YourUsername/Multilingual-FAQ-System.git
+$ git clone https://github.com/YourUsername/Multilingual-FAQ-Service.git
 
 $ cd Backend
 ```
 
-### 2️⃣ Install Dependencies
+### 📦 Install Dependencies
 
 ```sh
 $ npm install
 ```
 
-### 3️⃣ Setup Environment Variables
+### 🔧 Configure Environment Variables
 
-Create a `.env` file and configure the following:
+Create a `.env` file and add the following:
 
 ```env
-PORT=
+PORT=4000
 MONGODB_URI=
 REDIS_PORT=
 REDIS_URL=
@@ -42,28 +44,25 @@ REDIS_PASSWORD=
 JWT_SECRET=
 ```
 
-### 4️⃣ Start the Server
+### ▶ Start the Server
 
 ```sh
 $ npm start
 ```
 
-The server will be running at: **[http://localhost:4000](http://localhost:4000)** 🎉
+The API is now live at: **[http://localhost:4000](http://localhost:4000)** 🎉
 
 ---
 
-## 🚀 API Endpoints
+## 🔌 API Endpoints
 
-### 🔹 Authentication
+### 🛡️ Authentication
 
-#### 🆕 Sign Up
-
+#### 🆕 Register
 ```http
 POST /api/auth/signup
 ```
-
 **Request Body:**
-
 ```json
 {
   "email": "admin@example.com",
@@ -72,23 +71,18 @@ POST /api/auth/signup
 }
 ```
 
-#### 🔑 Sign In
-
+#### 🔑 Login
 ```http
 POST /api/auth/signin
 ```
-
 **Request Body:**
-
 ```json
 {
   "email": "admin@example.com",
   "password": "adminpassword"
 }
 ```
-
 **Response:**
-
 ```json
 {
   "token": "your_jwt_token",
@@ -96,34 +90,26 @@ POST /api/auth/signin
 }
 ```
 
-### 🔹 FAQ Management
+### 📚 FAQ Management
 
-#### 📖 Get All FAQs (Accessible to All Users)
-
+#### 📌 Retrieve All FAQs
 ```http
 GET /api/faqs
 ```
-
-**Optional Query Parameter:**
-
+**Optional Language Query:**
 ```http
-/api/faqs?lang=bn  # Fetch FAQs in Bengali
+/api/faqs?lang=bn  # Bengali FAQs
 ```
 
-#### ➕ Create a FAQ (Admin Only)
-
+#### ➕ Add a FAQ (Admin Only)
 ```http
 POST /api/faqs
 ```
-
 **Headers:**
-
 ```http
 Authorization: Bearer <your_token>
 ```
-
 **Request Body:**
-
 ```json
 {
   "question": "What is the capital of Spain?",
@@ -131,68 +117,62 @@ Authorization: Bearer <your_token>
 }
 ```
 
-#### ✏️ Update a FAQ (Admin Only)
-
+#### ✏️ Edit a FAQ (Admin Only)
 ```http
 PUT /api/faqs/:id
 ```
-
 **Headers:**
-
 ```http
 Authorization: Bearer <your_token>
 ```
 
-#### ❌ Delete a FAQ (Admin Only)
-
+#### ❌ Remove a FAQ (Admin Only)
 ```http
 DELETE /api/faqs/:id
 ```
-
 **Headers:**
-
 ```http
 Authorization: Bearer <your_token>
 ```
 
 ---
 
-## 🔐 Role-Based Access Control (RBAC)
+## 🔐 Role-Based Permissions
 
-- **User** ➝ Can only view FAQs
+- **User** ➝ Can only read FAQs
 - **Admin** ➝ Can create, edit, and delete FAQs
 
 ---
 
-## 🏗️ Technologies Used
+## 🏗️ Tech Stack
 
-- **Node.js** & **Express.js** 🏗️
+- **Node.js** & **Express.js** 🚀
 - **MongoDB & Mongoose** 🍃
-- **Redis** ⚡ (For caching)
+- **Redis Caching** ⚡
 - **JWT Authentication** 🔑
-- **Google Translate API** 🌎 (For translations)
+- **Google Translate API** 🌍
 
 ---
 
-## 🛠️ Future Enhancements
+## 🚀 Upcoming Features
 
-- ✅ Improve error handling & validation
-- ✅ Add more language support
-- ✅ Implement pagination for FAQs
-
----
-
-## 🤝 Contributing
-
-Want to contribute? Fork the repo and submit a PR! 🚀
+- ✅ Enhanced error handling & validation
+- ✅ Additional language support
+- ✅ FAQ pagination
 
 ---
 
-## 📄 License
+## 🤝 Contribute
 
-This project is **MIT Licensed**. 📝
+Want to help? Fork the repository and send a PR! 🚀
 
 ---
 
-### Made with ❤️ by Abhishek Yadav
+## 📜 License
+
+This project is released under the **MIT License**. 📝
+
+---
+
+### 💡 Developed with passion by Abhishek Yadav
 
